@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Collaborate with Product Beers",
+    "description": "Support Valencia's product community as a sponsor or by hosting our events at your space."
+  },
+  "hero": {
+    "label": "Collaborate with us",
+    "titleStart": "Grow the",
+    "titleHighlight": "community",
+    "description": "Join the companies and spaces that make Product Beers possible. Together we're building Valencia's most active product ecosystem."
+  },
+  "sponsor": {
+    "title": "Become a Sponsor",
+    "description": "Support our events financially and gain visibility with Valencia's most active product community.",
+    "benefits": {
+      "title": "Sponsor benefits",
+      "visibility": {
+        "title": "Brand visibility",
+        "description": "Your logo on our website, social media, and during all events."
+      },
+      "community": {
+        "title": "Community access",
+        "description": "Connect with +200 product, design, and tech professionals."
+      },
+      "networking": {
+        "title": "Exclusive networking",
+        "description": "Present your company and meet talent in a relaxed atmosphere."
+      },
+      "content": {
+        "title": "Custom content",
+        "description": "Option to sponsor talks or workshops in your area of expertise."
+      }
+    }
+  },
+  "hoster": {
+    "title": "Host an Event",
+    "description": "Have an office, coworking, or venue? Let us host an event there and we'll thank you publicly.",
+    "benefits": {
+      "title": "Host benefits",
+      "talent": {
+        "title": "Attract talent",
+        "description": "Product professionals will get to know your space and company."
+      },
+      "brand": {
+        "title": "Position your brand",
+        "description": "Associate your company with Valencia's product community."
+      },
+      "social": {
+        "title": "Social media mention",
+        "description": "We mention you in all event communications."
+      },
+      "community": {
+        "title": "Part of the community",
+        "description": "Your team can participate in the event as attendees."
+      }
+    }
+  },
+  "cta": {
+    "title": "Interested in collaborating?",
+    "description": "Fill out the form and we'll get in touch to explore collaboration options."
+  }
+}

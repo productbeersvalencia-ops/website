@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Sobre Nosotros - Product Beers",
+    "description": "Conoce la comunidad de producto de Valencia. Conectamos, enriquecemos y cultivamos el talento de producto."
+  },
+  "hero": {
+    "label": "Nuestra Historia",
+    "titleStart": "Donde el producto se comparte con una",
+    "titleHighlight": "cerveza",
+    "description": "Todo empezó con una tarde de cervezas entre dos desconocidos con algo en común: el mundo del producto y Valencia. Desde entonces, Product Beers ha crecido hasta convertirse en la comunidad de referencia para profesionales del producto en la ciudad."
+  },
+  "mission": {
+    "mission": {
+      "title": "Conectar",
+      "description": "Construir puentes entre profesionales y aficionados, creando un tejido fuerte que potencie la industria del producto en Valencia."
+    },
+    "vision": {
+      "title": "Enriquecer",
+      "description": "A través de eventos y sesiones, inspirar a nuestra comunidad a alcanzar niveles más altos de conocimiento y excelencia profesional."
+    },
+    "values": {
+      "title": "Cultivar",
+      "description": "Nutrir una cultura donde el respeto, la colaboración y la innovación florezcan. Porque el producto se hace mejor en comunidad."
+    }
+  },
+  "team": {
+    "label": "El Equipo",
+    "title": "Conoce a los organizadores",
+    "description": "Un grupo de apasionados del producto que decidieron crear el espacio que ellos mismos querían encontrar."
+  },
+  "cta": {
+    "title": "¿Listo para unirte?",
+    "description": "Únete a más de 130 product lovers en nuestro grupo de Telegram y entérate de los próximos eventos.",
+    "primaryButton": "Únete en Telegram",
+    "secondaryButton": "Síguenos en LinkedIn"
+  }
+}

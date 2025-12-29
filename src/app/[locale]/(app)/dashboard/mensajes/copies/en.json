@@ -1,0 +1,32 @@
+{
+  "title": "Messages",
+  "description": "Collaboration requests from sponsors and hosters",
+  "type": {
+    "sponsor": "Sponsor",
+    "hoster": "Hoster"
+  },
+  "status": {
+    "pending": "Pending",
+    "contacted": "Contacted",
+    "accepted": "Accepted",
+    "rejected": "Rejected"
+  },
+  "empty": {
+    "title": "No messages",
+    "description": "When someone sends a collaboration request from the website, it will appear here."
+  },
+  "actions": "Actions",
+  "markContacted": "Mark as contacted",
+  "markAccepted": "Mark as accepted",
+  "markRejected": "Mark as rejected",
+  "delete": "Delete",
+  "statusUpdated": "Status updated",
+  "deleted": "Message deleted",
+  "deleteConfirm": {
+    "title": "Delete message",
+    "description": "This action cannot be undone. The message will be permanently deleted.",
+    "cancel": "Cancel",
+    "confirm": "Delete",
+    "deleting": "Deleting..."
+  }
+}

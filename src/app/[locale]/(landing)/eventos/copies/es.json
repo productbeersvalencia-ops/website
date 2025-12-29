@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Eventos - Product Beers Valencia",
+    "description": "Descubre los próximos eventos de la comunidad de producto en Valencia. Charlas, networking y cervezas."
+  },
+  "hero": {
+    "label": "Eventos",
+    "titleStart": "Próximos",
+    "titleHighlight": "encuentros",
+    "description": "Donde el producto se discute, se aprende y se celebra. Descubre nuestros próximos eventos y únete a la conversación."
+  },
+  "upcoming": {
+    "title": "Próximos eventos",
+    "empty": {
+      "title": "No hay eventos programados",
+      "description": "Estamos preparando el próximo encuentro. Únete a nuestro Telegram para ser el primero en enterarte.",
+      "cta": "Únete en Telegram"
+    }
+  },
+  "past": {
+    "title": "Eventos pasados",
+    "showMore": "Ver más eventos pasados",
+    "empty": {
+      "title": "Aún no hemos celebrado eventos",
+      "description": "¡Pero estamos trabajando en ello! Síguenos para enterarte del primero."
+    }
+  },
+  "card": {
+    "speakers": "ponentes",
+    "speaker": "ponente",
+    "viewDetails": "Ver detalles",
+    "register": "Reservar plaza",
+    "spotsLeft": "plazas disponibles",
+    "full": "Completo"
+  },
+  "cta": {
+    "title": "¿No te quieres perder nada?",
+    "description": "Únete a nuestro Telegram y entérate de los próximos eventos antes que nadie.",
+    "button": "Únete en Telegram"
+  }
+}

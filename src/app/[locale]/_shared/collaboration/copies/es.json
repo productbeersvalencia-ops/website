@@ -1,0 +1,60 @@
+{
+  "section": {
+    "label": "Colabora con nosotros",
+    "title": "Sponsors & Hosters",
+    "description": "¿Quieres apoyar a la comunidad de producto de Valencia? Únete como sponsor o cede tu espacio para nuestros eventos."
+  },
+  "types": {
+    "sponsor": {
+      "title": "Ser Sponsor",
+      "description": "Apoya económicamente nuestros eventos y gana visibilidad ante la comunidad de producto más activa de Valencia."
+    },
+    "hoster": {
+      "title": "Ceder Espacio",
+      "description": "¿Tienes una oficina, coworking o local? Cédenos el espacio para un evento y te lo agradeceremos públicamente."
+    }
+  },
+  "benefits": {
+    "title": "¿Qué obtienes?",
+    "community": {
+      "title": "Acceso a la comunidad",
+      "description": "Conecta con profesionales de producto, diseño y tecnología de Valencia."
+    },
+    "visibility": {
+      "title": "Visibilidad de marca",
+      "description": "Tu logo en nuestra web, redes sociales y durante los eventos."
+    }
+  },
+  "sponsor": {
+    "benefit1": "Tu logo en web y eventos",
+    "benefit2": "Acceso a +200 profesionales",
+    "benefit3": "Networking exclusivo"
+  },
+  "hoster": {
+    "benefit1": "Atrae talento a tu oficina",
+    "benefit2": "Posiciona tu marca",
+    "benefit3": "Mención en todas las redes"
+  },
+  "form": {
+    "title": "Contacta con nosotros",
+    "description": "Rellena el formulario y nos pondremos en contacto contigo.",
+    "typeLabel": "¿Cómo quieres colaborar?",
+    "typeSponsor": "Sponsor",
+    "typeHoster": "Hoster",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre completo",
+    "email": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "company": "Empresa / Organización",
+    "companyPlaceholder": "Nombre de tu empresa",
+    "optional": "opcional",
+    "message": "Mensaje",
+    "messagePlaceholderSponsor": "Cuéntanos sobre tu empresa y cómo te gustaría colaborar...",
+    "messagePlaceholderHoster": "Cuéntanos sobre tu espacio, capacidad, ubicación...",
+    "submit": "Enviar solicitud",
+    "sending": "Enviando...",
+    "successTitle": "¡Solicitud enviada!",
+    "successDescription": "Nos pondremos en contacto contigo pronto.",
+    "errorTitle": "Error al enviar"
+  }
+}

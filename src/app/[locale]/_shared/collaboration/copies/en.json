@@ -1,0 +1,60 @@
+{
+  "section": {
+    "label": "Collaborate with us",
+    "title": "Sponsors & Hosters",
+    "description": "Want to support Valencia's product community? Join as a sponsor or host our events at your space."
+  },
+  "types": {
+    "sponsor": {
+      "title": "Become a Sponsor",
+      "description": "Support our events financially and gain visibility with Valencia's most active product community."
+    },
+    "hoster": {
+      "title": "Host an Event",
+      "description": "Have an office, coworking, or venue? Let us host an event there and we'll thank you publicly."
+    }
+  },
+  "benefits": {
+    "title": "What do you get?",
+    "community": {
+      "title": "Community access",
+      "description": "Connect with product, design, and tech professionals from Valencia."
+    },
+    "visibility": {
+      "title": "Brand visibility",
+      "description": "Your logo on our website, social media, and during events."
+    }
+  },
+  "sponsor": {
+    "benefit1": "Your logo on web & events",
+    "benefit2": "Access to +200 professionals",
+    "benefit3": "Exclusive networking"
+  },
+  "hoster": {
+    "benefit1": "Attract talent to your office",
+    "benefit2": "Position your brand",
+    "benefit3": "Mention across all social media"
+  },
+  "form": {
+    "title": "Contact us",
+    "description": "Fill out the form and we'll get back to you.",
+    "typeLabel": "How do you want to collaborate?",
+    "typeSponsor": "Sponsor",
+    "typeHoster": "Hoster",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "company": "Company / Organization",
+    "companyPlaceholder": "Your company name",
+    "optional": "optional",
+    "message": "Message",
+    "messagePlaceholderSponsor": "Tell us about your company and how you'd like to collaborate...",
+    "messagePlaceholderHoster": "Tell us about your space, capacity, location...",
+    "submit": "Send request",
+    "sending": "Sending...",
+    "successTitle": "Request sent!",
+    "successDescription": "We'll get back to you soon.",
+    "errorTitle": "Error sending"
+  }
+}

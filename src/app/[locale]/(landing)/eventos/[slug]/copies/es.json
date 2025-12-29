@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "titleSuffix": " - Product Beers Valencia"
+  },
+  "back": "Volver a eventos",
+  "status": {
+    "upcoming": "Pr\u00f3ximo evento",
+    "past": "Evento pasado",
+    "cancelled": "Cancelado"
+  },
+  "date": {
+    "label": "Fecha y hora"
+  },
+  "location": {
+    "label": "Lugar",
+    "viewMap": "Ver en Google Maps"
+  },
+  "registration": {
+    "label": "Registro",
+    "register": "Reservar plaza",
+    "spotsLeft": "plazas disponibles",
+    "full": "Evento completo",
+    "closed": "Registro cerrado"
+  },
+  "description": {
+    "label": "Sobre el evento"
+  },
+  "speakers": {
+    "label": "Ponentes",
+    "talkTitle": "Charla"
+  },
+  "sponsors": {
+    "label": "Patrocinadores"
+  },
+  "share": {
+    "label": "Compartir",
+    "twitter": "Compartir en Twitter",
+    "linkedin": "Compartir en LinkedIn",
+    "copy": "Copiar enlace",
+    "copied": "Enlace copiado"
+  },
+  "notFound": {
+    "title": "Evento no encontrado",
+    "description": "El evento que buscas no existe o ya no est\u00e1 disponible.",
+    "cta": "Ver todos los eventos"
+  }
+}

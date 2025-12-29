@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Colabora con Product Beers",
+    "description": "Apoya a la comunidad de producto de Valencia como sponsor o cediendo tu espacio para nuestros eventos."
+  },
+  "hero": {
+    "label": "Colabora con nosotros",
+    "titleStart": "Haz crecer la",
+    "titleHighlight": "comunidad",
+    "description": "Únete a las empresas y espacios que hacen posible Product Beers. Juntos creamos el ecosistema de producto más activo de Valencia."
+  },
+  "sponsor": {
+    "title": "Ser Sponsor",
+    "description": "Apoya económicamente nuestros eventos y gana visibilidad ante la comunidad de producto más activa de Valencia.",
+    "benefits": {
+      "title": "Beneficios para sponsors",
+      "visibility": {
+        "title": "Visibilidad de marca",
+        "description": "Tu logo en nuestra web, redes sociales y durante todos los eventos."
+      },
+      "community": {
+        "title": "Acceso a la comunidad",
+        "description": "Conecta con +200 profesionales de producto, diseño y tecnología."
+      },
+      "networking": {
+        "title": "Networking exclusivo",
+        "description": "Presenta tu empresa y conoce talento en un ambiente distendido."
+      },
+      "content": {
+        "title": "Contenido personalizado",
+        "description": "Opción de patrocinar charlas o workshops sobre tu área de expertise."
+      }
+    }
+  },
+  "hoster": {
+    "title": "Ceder Espacio",
+    "description": "¿Tienes una oficina, coworking o local? Cédenos el espacio para un evento y te lo agradeceremos públicamente.",
+    "benefits": {
+      "title": "Beneficios para hosters",
+      "talent": {
+        "title": "Atrae talento",
+        "description": "Profesionales de producto conocerán tu espacio y tu empresa."
+      },
+      "brand": {
+        "title": "Posiciona tu marca",
+        "description": "Asocia tu empresa con la comunidad de producto de Valencia."
+      },
+      "social": {
+        "title": "Mención en redes",
+        "description": "Te mencionamos en todas las comunicaciones del evento."
+      },
+      "community": {
+        "title": "Parte de la comunidad",
+        "description": "Tu equipo puede participar en el evento como asistentes."
+      }
+    }
+  },
+  "cta": {
+    "title": "¿Te interesa colaborar?",
+    "description": "Rellena el formulario y nos pondremos en contacto contigo para explorar las opciones de colaboración."
+  }
+}

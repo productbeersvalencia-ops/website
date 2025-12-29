@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Colaboradores - Admin",
+    "description": "Gestiona sponsors y hosters"
+  },
+  "title": "Colaboradores",
+  "description": "Gestiona sponsors y hosters que aparecen en la web pública",
+  "tabs": {
+    "all": "Todos",
+    "sponsors": "Sponsors",
+    "hosters": "Hosters"
+  },
+  "addNew": "Añadir colaborador",
+  "empty": {
+    "title": "No hay colaboradores",
+    "description": "Añade tu primer sponsor o hoster para mostrarlos en la web pública."
+  },
+  "table": {
+    "logo": "Logo",
+    "name": "Nombre",
+    "type": "Tipo",
+    "website": "Web",
+    "status": "Estado",
+    "actions": "Acciones"
+  },
+  "status": {
+    "active": "Activo",
+    "inactive": "Inactivo"
+  },
+  "type": {
+    "sponsor": "Sponsor",
+    "hoster": "Hoster"
+  },
+  "form": {
+    "title": {
+      "create": "Añadir colaborador",
+      "edit": "Editar colaborador"
+    },
+    "name": {
+      "label": "Nombre",
+      "placeholder": "Nombre de la empresa"
+    },
+    "logoUrl": {
+      "label": "URL del logo",
+      "placeholder": "https://ejemplo.com/logo.png",
+      "help": "Enlace directo al logo de la empresa (SVG o PNG recomendado)"
+    },
+    "websiteUrl": {
+      "label": "URL de la web",
+      "placeholder": "https://ejemplo.com"
+    },
+    "type": {
+      "label": "Tipo",
+      "placeholder": "Selecciona tipo"
+    },
+    "isActive": {
+      "label": "Activo",
+      "description": "Mostrar en la web pública"
+    },
+    "displayOrder": {
+      "label": "Orden",
+      "help": "Números menores aparecen primero"
+    },
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "Guardando..."
+  },
+  "actions": {
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "activate": "Activar",
+    "deactivate": "Desactivar"
+  },
+  "messages": {
+    "created": "Colaborador creado correctamente",
+    "updated": "Colaborador actualizado correctamente",
+    "deleted": "Colaborador eliminado correctamente",
+    "activated": "Colaborador activado",
+    "deactivated": "Colaborador desactivado",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo."
+  },
+  "confirmDelete": {
+    "title": "¿Eliminar colaborador?",
+    "description": "Esta acción no se puede deshacer. El colaborador se eliminará permanentemente.",
+    "cancel": "Cancelar",
+    "confirm": "Eliminar"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Collaborators - Admin",
+    "description": "Manage sponsors and hosters"
+  },
+  "title": "Collaborators",
+  "description": "Manage sponsors and hosters that appear on the public site",
+  "tabs": {
+    "all": "All",
+    "sponsors": "Sponsors",
+    "hosters": "Hosters"
+  },
+  "addNew": "Add collaborator",
+  "empty": {
+    "title": "No collaborators yet",
+    "description": "Add your first sponsor or hoster to display them on the public site."
+  },
+  "table": {
+    "logo": "Logo",
+    "name": "Name",
+    "type": "Type",
+    "website": "Website",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "type": {
+    "sponsor": "Sponsor",
+    "hoster": "Hoster"
+  },
+  "form": {
+    "title": {
+      "create": "Add collaborator",
+      "edit": "Edit collaborator"
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": "Company name"
+    },
+    "logoUrl": {
+      "label": "Logo URL",
+      "placeholder": "https://example.com/logo.png",
+      "help": "Direct link to the company logo (SVG or PNG recommended)"
+    },
+    "websiteUrl": {
+      "label": "Website URL",
+      "placeholder": "https://example.com"
+    },
+    "type": {
+      "label": "Type",
+      "placeholder": "Select type"
+    },
+    "isActive": {
+      "label": "Active",
+      "description": "Show on public site"
+    },
+    "displayOrder": {
+      "label": "Display order",
+      "help": "Lower numbers appear first"
+    },
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving..."
+  },
+  "actions": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "activate": "Activate",
+    "deactivate": "Deactivate"
+  },
+  "messages": {
+    "created": "Collaborator created successfully",
+    "updated": "Collaborator updated successfully",
+    "deleted": "Collaborator deleted successfully",
+    "activated": "Collaborator activated",
+    "deactivated": "Collaborator deactivated",
+    "error": "Something went wrong. Please try again."
+  },
+  "confirmDelete": {
+    "title": "Delete collaborator?",
+    "description": "This action cannot be undone. The collaborator will be permanently removed.",
+    "cancel": "Cancel",
+    "confirm": "Delete"
+  }
+}

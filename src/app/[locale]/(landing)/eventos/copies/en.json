@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Events - Product Beers Valencia",
+    "description": "Discover the upcoming events of the product community in Valencia. Talks, networking and beers."
+  },
+  "hero": {
+    "label": "Events",
+    "titleStart": "Upcoming",
+    "titleHighlight": "meetups",
+    "description": "Where product is discussed, learned and celebrated. Discover our upcoming events and join the conversation."
+  },
+  "upcoming": {
+    "title": "Upcoming events",
+    "empty": {
+      "title": "No events scheduled",
+      "description": "We're preparing the next meetup. Join our Telegram to be the first to know.",
+      "cta": "Join Telegram"
+    }
+  },
+  "past": {
+    "title": "Past events",
+    "showMore": "Show more past events",
+    "empty": {
+      "title": "We haven't held events yet",
+      "description": "But we're working on it! Follow us to find out about the first one."
+    }
+  },
+  "card": {
+    "speakers": "speakers",
+    "speaker": "speaker",
+    "viewDetails": "View details",
+    "register": "Reserve your spot",
+    "spotsLeft": "spots available",
+    "full": "Full"
+  },
+  "cta": {
+    "title": "Don't want to miss anything?",
+    "description": "Join our Telegram and find out about upcoming events before anyone else.",
+    "button": "Join Telegram"
+  }
+}

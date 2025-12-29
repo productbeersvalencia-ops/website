@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "About Us - Product Beers",
+    "description": "Meet Valencia's product community. We connect, enrich and cultivate product talent."
+  },
+  "hero": {
+    "label": "Our Story",
+    "titleStart": "Where product is shared over a",
+    "titleHighlight": "beer",
+    "description": "It all started with an afternoon of beers between two strangers with something in common: the world of product and Valencia. Since then, Product Beers has grown into the go-to community for product professionals in the city."
+  },
+  "mission": {
+    "mission": {
+      "title": "Connect",
+      "description": "Building bridges between professionals and enthusiasts, creating a strong network that empowers Valencia's product industry."
+    },
+    "vision": {
+      "title": "Enrich",
+      "description": "Through events and sessions, inspiring our community to reach higher levels of knowledge and professional excellence."
+    },
+    "values": {
+      "title": "Cultivate",
+      "description": "Nurturing a culture where respect, collaboration and innovation flourish. Because product is better done in community."
+    }
+  },
+  "team": {
+    "label": "The Team",
+    "title": "Meet the organizers",
+    "description": "A group of product enthusiasts who decided to create the space they themselves wanted to find."
+  },
+  "cta": {
+    "title": "Ready to join?",
+    "description": "Join 130+ product lovers in our Telegram group and stay updated on upcoming events.",
+    "primaryButton": "Join Telegram",
+    "secondaryButton": "Follow on LinkedIn"
+  }
+}

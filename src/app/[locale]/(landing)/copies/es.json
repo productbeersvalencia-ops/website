@@ -1,0 +1,114 @@
+{
+  "features": {
+    "title": "Qué encontrarás en",
+    "titleHighlight": "Product Beers",
+    "subtitle": "Más que eventos, un ecosistema para profesionales del producto",
+    "talks": {
+      "title": "Charlas Inspiradoras",
+      "description": "Aprende de líderes de producto compartiendo experiencias reales"
+    },
+    "networking": {
+      "title": "Networking de Calidad",
+      "description": "Conecta con PMs, diseñadores, developers y founders en Valencia"
+    },
+    "learning": {
+      "title": "Aprendizaje Continuo",
+      "description": "Mantente al día con tendencias y mejores prácticas del sector"
+    },
+    "fun": {
+      "title": "Diversión Asegurada",
+      "description": "Porque las mejores ideas surgen con una cerveza en la mano"
+    }
+  },
+  "hero": {
+    "location": "Valencia, España",
+    "tagline": "Donde los",
+    "taglineEnd": "conectan",
+    "roles": ["Product Managers", "Product Designers", "Developers", "Founders", "Entusiastas"],
+    "description": "La comunidad de producto de Valencia donde el conocimiento se comparte mejor",
+    "descriptionHighlight": "con una cerveza en la mano",
+    "ctaTelegram": "Únete en Telegram",
+    "ctaLinkedin": "Síguenos"
+  },
+  "nextEvent": {
+    "badge": "Próximamente",
+    "title": "Nuestro próximo evento está en camino",
+    "description": "Únete a la comunidad para ser el primero en enterarte.",
+    "cta": "No te lo pierdas"
+  },
+  "mission": {
+    "badge": "Nuestra Misión",
+    "title": "Conectar, Enriquecer y",
+    "titleHighlight": "Cultivar",
+    "subtitle": "el talento de producto en Valencia",
+    "connect": {
+      "title": "Conectar",
+      "description": "Construir puentes entre profesionales y entusiastas, creando una red sólida que impulse la industria del producto."
+    },
+    "enrich": {
+      "title": "Enriquecer",
+      "description": "A través de eventos y charlas, inspirar a nuestra comunidad a alcanzar nuevos niveles de conocimiento."
+    },
+    "cultivate": {
+      "title": "Cultivar",
+      "description": "Nutrir una cultura donde el respeto, la colaboración y la innovación florezcan."
+    }
+  },
+  "values": {
+    "title": "Lo que nos une",
+    "subtitle": "Los mejores momentos ocurren cuando el conocimiento se mezcla con diversión y autenticidad",
+    "community": {
+      "title": "Comunidad",
+      "description": "Un espacio inclusivo donde cada voz cuenta y cada historia inspira."
+    },
+    "learning": {
+      "title": "Aprendizaje",
+      "description": "Cada evento es una oportunidad de crecer juntos como profesionales."
+    },
+    "fun": {
+      "title": "Diversión",
+      "description": "Las mejores conversaciones nacen con una cerveza en la mano."
+    },
+    "authenticity": {
+      "title": "Autenticidad",
+      "description": "Sin pretensiones. Sé tú mismo. Eso es lo que nos hace únicos."
+    }
+  },
+  "team": {
+    "title": "El equipo",
+    "subtitle": "Todo empezó con una tarde de cervezas entre dos desconocidos con algo en común: el producto y Valencia.",
+    "members": {
+      "carlos_corada": {
+        "role": "Founder & Organizador"
+      },
+      "maribel": {
+        "role": "Organizadora & Vibe Coder"
+      },
+      "carlos_moya": {
+        "role": "Organizador"
+      },
+      "marta": {
+        "role": "Organizadora"
+      },
+      "guille": {
+        "role": "Organizador"
+      }
+    }
+  },
+  "collaborators": {
+    "title": "Han confiado en nosotros",
+    "subtitle": "Gracias a quienes hacen posible Product Beers",
+    "cta": "¿Quieres colaborar?"
+  },
+  "cta": {
+    "title": "¿Listo para unirte a la",
+    "titleHighlight": "comunidad",
+    "subtitle": "Conecta con profesionales del producto en Valencia. Eventos, networking y mucho más.",
+    "button": "Únete a Product Beers",
+    "footer": "Hecho con",
+    "footerBeer": "cerveza",
+    "footerAnd": "y",
+    "footerPassion": "pasión",
+    "footerLocation": "en Valencia"
+  }
+}

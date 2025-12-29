@@ -1,0 +1,32 @@
+{
+  "title": "Mensajes",
+  "description": "Solicitudes de colaboración de sponsors y hosters",
+  "type": {
+    "sponsor": "Sponsor",
+    "hoster": "Hoster"
+  },
+  "status": {
+    "pending": "Pendiente",
+    "contacted": "Contactado",
+    "accepted": "Aceptado",
+    "rejected": "Rechazado"
+  },
+  "empty": {
+    "title": "No hay mensajes",
+    "description": "Cuando alguien envíe una solicitud de colaboración desde la web, aparecerá aquí."
+  },
+  "actions": "Acciones",
+  "markContacted": "Marcar como contactado",
+  "markAccepted": "Marcar como aceptado",
+  "markRejected": "Marcar como rechazado",
+  "delete": "Eliminar",
+  "statusUpdated": "Estado actualizado",
+  "deleted": "Mensaje eliminado",
+  "deleteConfirm": {
+    "title": "Eliminar mensaje",
+    "description": "Esta acción no se puede deshacer. El mensaje será eliminado permanentemente.",
+    "cancel": "Cancelar",
+    "confirm": "Eliminar",
+    "deleting": "Eliminando..."
+  }
+}

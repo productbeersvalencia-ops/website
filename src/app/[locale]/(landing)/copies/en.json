@@ -1,0 +1,114 @@
+{
+  "features": {
+    "title": "What you'll find at",
+    "titleHighlight": "Product Beers",
+    "subtitle": "More than events, an ecosystem for product professionals",
+    "talks": {
+      "title": "Inspiring Talks",
+      "description": "Learn from product leaders sharing real experiences and insights"
+    },
+    "networking": {
+      "title": "Quality Networking",
+      "description": "Connect with PMs, designers, developers and founders in Valencia"
+    },
+    "learning": {
+      "title": "Continuous Learning",
+      "description": "Stay updated with industry trends and best practices"
+    },
+    "fun": {
+      "title": "Fun Guaranteed",
+      "description": "Because the best ideas emerge with a beer in hand"
+    }
+  },
+  "hero": {
+    "location": "Valencia, Spain",
+    "tagline": "Where",
+    "taglineEnd": "connect",
+    "roles": ["Product Managers", "Product Designers", "Developers", "Founders", "Enthusiasts"],
+    "description": "Valencia's product community where knowledge is best shared",
+    "descriptionHighlight": "with a beer in hand",
+    "ctaTelegram": "Join on Telegram",
+    "ctaLinkedin": "Follow us"
+  },
+  "nextEvent": {
+    "badge": "Coming soon",
+    "title": "Our next event is on the way",
+    "description": "Join the community to be the first to know.",
+    "cta": "Don't miss it"
+  },
+  "mission": {
+    "badge": "Our Mission",
+    "title": "Connect, Enrich and",
+    "titleHighlight": "Cultivate",
+    "subtitle": "product talent in Valencia",
+    "connect": {
+      "title": "Connect",
+      "description": "Build bridges between professionals and enthusiasts, creating a solid network that drives the product industry."
+    },
+    "enrich": {
+      "title": "Enrich",
+      "description": "Through events and talks, inspire our community to reach new levels of knowledge."
+    },
+    "cultivate": {
+      "title": "Cultivate",
+      "description": "Nurture a culture where respect, collaboration and innovation flourish."
+    }
+  },
+  "values": {
+    "title": "What unites us",
+    "subtitle": "The best moments happen when knowledge mixes with fun and authenticity",
+    "community": {
+      "title": "Community",
+      "description": "An inclusive space where every voice counts and every story inspires."
+    },
+    "learning": {
+      "title": "Learning",
+      "description": "Every event is an opportunity to grow together as professionals."
+    },
+    "fun": {
+      "title": "Fun",
+      "description": "The best conversations are born with a beer in hand."
+    },
+    "authenticity": {
+      "title": "Authenticity",
+      "description": "No pretense. Be yourself. That's what makes us unique."
+    }
+  },
+  "team": {
+    "title": "The team",
+    "subtitle": "It all started with an afternoon of beers between two strangers with something in common: product and Valencia.",
+    "members": {
+      "carlos_corada": {
+        "role": "Founder & Organizer"
+      },
+      "maribel": {
+        "role": "Organizer & Vibe Coder"
+      },
+      "carlos_moya": {
+        "role": "Organizer"
+      },
+      "marta": {
+        "role": "Organizer"
+      },
+      "guille": {
+        "role": "Organizer"
+      }
+    }
+  },
+  "collaborators": {
+    "title": "They trusted us",
+    "subtitle": "Thanks to those who make Product Beers possible",
+    "cta": "Want to collaborate?"
+  },
+  "cta": {
+    "title": "Ready to join the",
+    "titleHighlight": "community",
+    "subtitle": "Connect with product professionals in Valencia. Events, networking and much more.",
+    "button": "Join Product Beers",
+    "footer": "Made with",
+    "footerBeer": "beer",
+    "footerAnd": "and",
+    "footerPassion": "passion",
+    "footerLocation": "in Valencia"
+  }
+}
