@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
-import { getEventBySlug, getPublishedEvents } from '@/features/events';
+import { getEventBySlug } from '@/features/events';
 import { EventDetail } from './event-detail';
 
 interface EventPageProps {
@@ -29,13 +29,15 @@ export async function generateMetadata({ params }: EventPageProps) {
   };
 }
 
-export async function generateStaticParams() {
-  const { data: events } = await getPublishedEvents();
+// Dynamic rendering - events are fetched at request time
+// This avoids calling cookies() outside request scope during build
+export const dynamic = 'force-dynamic';
 
-  return (events || []).map((event) => ({
-    slug: event.slug,
-  }));
-}
+// Disable static params generation since we use dynamic rendering
+// export async function generateStaticParams() {
+//   const { data: events } = await getPublishedEvents();
+//   return (events || []).map((event) => ({ slug: event.slug }));
+// }
 
 export default async function EventPage({ params }: EventPageProps) {
   const { slug } = await params;
