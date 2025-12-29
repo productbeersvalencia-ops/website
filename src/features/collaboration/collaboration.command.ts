@@ -73,3 +73,46 @@ export async function deleteCollaborationRequest(
 
   return { success: true, error: null };
 }
+
+/**
+ * Mark collaboration request as read (admin only)
+ */
+export async function markCollaborationAsRead(
+  id: string
+): Promise<{ success: boolean; error: string | null }> {
+  const supabase = await createClientServer();
+
+  const { error } = await supabase
+    .from('collaboration_requests')
+    .update({ is_read: true })
+    .eq('id', id);
+
+  if (error) {
+    console.error('Error marking collaboration as read:', error);
+    return { success: false, error: error.message };
+  }
+
+  return { success: true, error: null };
+}
+
+/**
+ * Toggle read status of collaboration request (admin only)
+ */
+export async function toggleCollaborationReadStatus(
+  id: string,
+  isRead: boolean
+): Promise<{ success: boolean; error: string | null }> {
+  const supabase = await createClientServer();
+
+  const { error } = await supabase
+    .from('collaboration_requests')
+    .update({ is_read: isRead })
+    .eq('id', id);
+
+  if (error) {
+    console.error('Error toggling collaboration read status:', error);
+    return { success: false, error: error.message };
+  }
+
+  return { success: true, error: null };
+}

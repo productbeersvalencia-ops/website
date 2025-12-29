@@ -14,14 +14,18 @@ import {
   handleMakeUserAdmin,
   handleRemoveUserAdmin,
 } from './admin.handler';
-import type { ActionResult, InfoBarSettings, EmailJourneysSettings, FeatureFlags, CrossSellProductsSettings, AffiliateProgramSettings, CollaboratorInput, Collaborator } from './types';
+import type { ActionResult, InfoBarSettings, EmailJourneysSettings, FeatureFlags, CrossSellProductsSettings, AffiliateProgramSettings, CollaboratorInput, Collaborator, SpeakerInput, Speaker } from './types';
 import {
   createCollaborator,
   updateCollaborator,
   toggleCollaboratorActive,
   deleteCollaborator,
+  createSpeaker,
+  updateSpeaker,
+  toggleSpeakerActive,
+  deleteSpeaker,
 } from './admin.command';
-import { collaboratorSchema } from './types';
+import { collaboratorSchema, speakerSchema } from './types';
 
 /**
  * ==============================================
@@ -378,4 +382,102 @@ export async function deleteCollaboratorAction(
   }
 
   return { success: false, data: null, error: result.error || 'Failed to delete collaborator' };
+}
+
+/**
+ * ==============================================
+ * SPEAKER ACTIONS
+ * ==============================================
+ */
+
+/**
+ * Create a new speaker
+ */
+export async function createSpeakerAction(
+  input: SpeakerInput
+): Promise<ActionResult<{ id: string }>> {
+  const user = await requireAdmin();
+
+  // Validate input
+  const validation = speakerSchema.safeParse(input);
+  if (!validation.success) {
+    return {
+      success: false,
+      data: null,
+      error: validation.error.issues[0].message,
+    };
+  }
+
+  const result = await createSpeaker(validation.data, user.id);
+
+  if (result.success && result.id) {
+    revalidatePath('/[locale]/dashboard/ponentes');
+    return {
+      success: true,
+      data: { id: result.id },
+      error: null,
+    };
+  }
+
+  return {
+    success: false,
+    data: null,
+    error: result.error || 'Failed to create speaker',
+  };
+}
+
+/**
+ * Update an existing speaker
+ */
+export async function updateSpeakerAction(
+  id: string,
+  input: Partial<SpeakerInput>
+): Promise<ActionResult> {
+  const user = await requireAdmin();
+
+  const result = await updateSpeaker(id, input, user.id);
+
+  if (result.success) {
+    revalidatePath('/[locale]/dashboard/ponentes');
+    return { success: true, data: undefined, error: null };
+  }
+
+  return { success: false, data: null, error: result.error || 'Failed to update speaker' };
+}
+
+/**
+ * Toggle speaker active status
+ */
+export async function toggleSpeakerAction(
+  id: string,
+  isActive: boolean
+): Promise<ActionResult> {
+  const user = await requireAdmin();
+
+  const result = await toggleSpeakerActive(id, isActive, user.id);
+
+  if (result.success) {
+    revalidatePath('/[locale]/dashboard/ponentes');
+    return { success: true, data: undefined, error: null };
+  }
+
+  return { success: false, data: null, error: result.error || 'Failed to toggle speaker' };
+}
+
+/**
+ * Delete a speaker
+ */
+export async function deleteSpeakerAction(
+  id: string
+): Promise<ActionResult> {
+  await requireAdmin();
+
+  const result = await deleteSpeaker(id);
+
+  if (result.success) {
+    revalidatePath('/[locale]/dashboard/ponentes');
+    return { success: true, data: undefined, error: null };
+  }
+
+  return { success: false, data: null, error: result.error || 'Failed to delete speaker' };
 }

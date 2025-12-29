@@ -9,5 +9,22 @@
   "settings": "Configuración",
   "logout": "Cerrar Sesión",
   "login": "Iniciar Sesión",
-  "register": "Registrarse"
+  "register": "Registrarse",
+  "admin": {
+    "title": "Panel Admin",
+    "backToApp": "Volver a la App",
+    "nav": {
+      "dashboard": "Dashboard",
+      "events": "Eventos",
+      "content": "Contenido",
+      "gallery": "Galería",
+      "speakers": "Ponentes",
+      "sponsors": "Sponsors",
+      "team": "Equipo",
+      "communities": "Comunidades",
+      "messages": "Mensajes",
+      "infoBar": "Info-Bar",
+      "collaborators": "Colaboradores"
+    }
+  }
 }

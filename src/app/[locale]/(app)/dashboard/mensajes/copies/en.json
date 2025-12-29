@@ -11,17 +11,30 @@
     "accepted": "Accepted",
     "rejected": "Rejected"
   },
+  "filter": {
+    "all": "All",
+    "unread": "Unread",
+    "read": "Read",
+    "noUnread": "No unread messages",
+    "noRead": "No read messages"
+  },
   "empty": {
     "title": "No messages",
     "description": "When someone sends a collaboration request from the website, it will appear here."
   },
   "actions": "Actions",
+  "markRead": "Mark as read",
+  "markUnread": "Mark as unread",
+  "markedRead": "Marked as read",
+  "markedUnread": "Marked as unread",
+  "unreadIndicator": "Unread message",
   "markContacted": "Mark as contacted",
   "markAccepted": "Mark as accepted",
   "markRejected": "Mark as rejected",
   "delete": "Delete",
   "statusUpdated": "Status updated",
   "deleted": "Message deleted",
+  "error": "Something went wrong",
   "deleteConfirm": {
     "title": "Delete message",
     "description": "This action cannot be undone. The message will be permanently deleted.",

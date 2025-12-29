@@ -20,7 +20,7 @@ function MensajesContent({
 }: {
   requests: Awaited<ReturnType<typeof getCollaborationRequests>>['data'];
 }) {
-  const t = useTranslations('messages');
+  const t = useTranslations('dashboard-mensajes');
 
   return (
     <div className="space-y-6">

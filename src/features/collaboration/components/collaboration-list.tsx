@@ -1,12 +1,13 @@
 'use client';
 
-import { useActionState, useEffect, useState } from 'react';
+import { useActionState, useEffect, useState, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
-import { Mail, Building2, Calendar, MessageSquare, MoreHorizontal, Trash2, Check, X, Clock, CheckCircle2, XCircle } from 'lucide-react';
+import { Mail, Building2, Calendar, MessageSquare, MoreHorizontal, Trash2, Check, X, Clock, CheckCircle2, XCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/shared/components/ui/button';
 import { Badge } from '@/shared/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/shared/components/ui/card';
+import { Tabs, TabsList, TabsTrigger } from '@/shared/components/ui/tabs';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,7 +26,7 @@ import {
   AlertDialogTitle,
 } from '@/shared/components/ui/alert-dialog';
 import type { CollaborationRequest, CollaborationStatus } from '../types';
-import { updateCollaborationStatusAction, deleteCollaborationAction } from '../collaboration.actions';
+import { updateCollaborationStatusAction, deleteCollaborationAction, toggleReadStatusAction } from '../collaboration.actions';
 
 interface CollaborationListProps {
   requests: CollaborationRequest[];
@@ -38,12 +39,24 @@ const statusConfig: Record<CollaborationStatus, { color: string; icon: React.Rea
   rejected: { color: 'bg-red-500/10 text-red-500 border-red-500/20', icon: <XCircle className="w-3 h-3" /> },
 };
 
+type ReadFilter = 'all' | 'unread' | 'read';
+
 export function CollaborationList({ requests: initialRequests }: CollaborationListProps) {
-  const t = useTranslations('messages');
+  const t = useTranslations('dashboard-mensajes');
   const [requests, setRequests] = useState(initialRequests);
+  const [filter, setFilter] = useState<ReadFilter>('all');
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [isPendingRead, startTransition] = useTransition();
   const [updateState, updateAction, isPendingUpdate] = useActionState(updateCollaborationStatusAction, null);
   const [deleteState, deleteAction, isPendingDelete] = useActionState(deleteCollaborationAction, null);
+
+  const filteredRequests = requests.filter((r) => {
+    if (filter === 'unread') return !r.is_read;
+    if (filter === 'read') return r.is_read;
+    return true;
+  });
+
+  const unreadCount = requests.filter((r) => !r.is_read).length;
 
   useEffect(() => {
     if (updateState?.success) {
@@ -71,6 +84,18 @@ export function CollaborationList({ requests: initialRequests }: CollaborationLi
 
     // Optimistic update
     setRequests(prev => prev.map(r => r.id === id ? { ...r, status } : r));
+  };
+
+  const handleToggleRead = (id: string, currentIsRead: boolean) => {
+    startTransition(async () => {
+      const result = await toggleReadStatusAction(id, !currentIsRead);
+      if (result.success) {
+        setRequests(prev => prev.map(r => r.id === id ? { ...r, is_read: !currentIsRead } : r));
+        toast.success(!currentIsRead ? t('markedRead') : t('markedUnread'));
+      } else {
+        toast.error(result.error || t('error'));
+      }
+    });
   };
 
   const handleDelete = () => {
@@ -106,10 +131,38 @@ export function CollaborationList({ requests: initialRequests }: CollaborationLi
 
   return (
     <>
+      {/* Filter tabs */}
+      <Tabs value={filter} onValueChange={(v) => setFilter(v as ReadFilter)} className="mb-4">
+        <TabsList>
+          <TabsTrigger value="all">
+            {t('filter.all')} ({requests.length})
+          </TabsTrigger>
+          <TabsTrigger value="unread">
+            {t('filter.unread')} ({unreadCount})
+          </TabsTrigger>
+          <TabsTrigger value="read">
+            {t('filter.read')} ({requests.length - unreadCount})
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+
+      {filteredRequests.length === 0 ? (
+        <Card>
+          <CardContent className="flex flex-col items-center justify-center py-12">
+            <MessageSquare className="w-12 h-12 text-muted-foreground/50 mb-4" />
+            <p className="text-muted-foreground text-center">
+              {filter === 'unread' ? t('filter.noUnread') : t('filter.noRead')}
+            </p>
+          </CardContent>
+        </Card>
+      ) : (
       <div className="grid gap-4">
-        {requests.map((request) => (
-          <Card key={request.id} className="relative overflow-hidden">
+        {filteredRequests.map((request) => (
+          <Card key={request.id} className={`relative overflow-hidden ${!request.is_read ? 'ring-2 ring-primary/20 bg-primary/5' : ''}`}>
             <div className={`absolute left-0 top-0 bottom-0 w-1 ${request.type === 'sponsor' ? 'bg-primary' : 'bg-blue-500'}`} />
+            {!request.is_read && (
+              <div className="absolute top-3 right-12 w-2 h-2 rounded-full bg-primary" title={t('unreadIndicator')} />
+            )}
 
             <CardHeader className="pb-3">
               <div className="flex items-start justify-between gap-4">
@@ -146,6 +199,20 @@ export function CollaborationList({ requests: initialRequests }: CollaborationLi
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={() => handleToggleRead(request.id, request.is_read)} disabled={isPendingRead}>
+                      {request.is_read ? (
+                        <>
+                          <EyeOff className="w-4 h-4 mr-2" />
+                          {t('markUnread')}
+                        </>
+                      ) : (
+                        <>
+                          <Eye className="w-4 h-4 mr-2" />
+                          {t('markRead')}
+                        </>
+                      )}
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={() => handleStatusChange(request.id, 'contacted')} disabled={isPendingUpdate}>
                       <Mail className="w-4 h-4 mr-2" />
                       {t('markContacted')}
@@ -178,6 +245,7 @@ export function CollaborationList({ requests: initialRequests }: CollaborationLi
           </Card>
         ))}
       </div>
+      )}
 
       <AlertDialog open={!!deleteId} onOpenChange={(open) => !open && setDeleteId(null)}>
         <AlertDialogContent>

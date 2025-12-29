@@ -10,6 +10,7 @@ import type {
   MaintenanceSettings,
   AffiliateProgramSettings,
   Collaborator,
+  Speaker,
 } from './types';
 
 /**
@@ -653,4 +654,69 @@ export async function getCollaboratorById(
   }
 
   return data as Collaborator;
+}
+
+/**
+ * ==============================================
+ * SPEAKER QUERIES
+ * ==============================================
+ */
+
+/**
+ * Get all speakers (admin view)
+ */
+export async function getAllSpeakers(): Promise<Speaker[]> {
+  const supabase = await createClientServer();
+
+  const { data, error } = await supabase
+    .from('speakers')
+    .select('*')
+    .order('name', { ascending: true });
+
+  if (error) {
+    console.error('Error fetching speakers:', error);
+    return [];
+  }
+
+  return data as Speaker[];
+}
+
+/**
+ * Get active speakers
+ */
+export async function getActiveSpeakers(): Promise<Speaker[]> {
+  const supabase = await createClientServer();
+
+  const { data, error } = await supabase
+    .from('speakers')
+    .select('*')
+    .eq('is_active', true)
+    .order('name', { ascending: true });
+
+  if (error) {
+    console.error('Error fetching active speakers:', error);
+    return [];
+  }
+
+  return data as Speaker[];
+}
+
+/**
+ * Get a specific speaker by ID
+ */
+export async function getSpeakerById(id: string): Promise<Speaker | null> {
+  const supabase = await createClientServer();
+
+  const { data, error } = await supabase
+    .from('speakers')
+    .select('*')
+    .eq('id', id)
+    .single();
+
+  if (error || !data) {
+    console.error(`Error fetching speaker ${id}:`, error);
+    return null;
+  }
+
+  return data as Speaker;
 }

@@ -7,6 +7,7 @@ import type { CollaborationRequest, CollaborationStatus, CollaborationType } fro
 export async function getCollaborationRequests(filters?: {
   type?: CollaborationType;
   status?: CollaborationStatus;
+  is_read?: boolean;
 }): Promise<{ data: CollaborationRequest[]; error: string | null }> {
   const supabase = await createClientServer();
 
@@ -21,6 +22,10 @@ export async function getCollaborationRequests(filters?: {
 
   if (filters?.status) {
     query = query.eq('status', filters.status);
+  }
+
+  if (filters?.is_read !== undefined) {
+    query = query.eq('is_read', filters.is_read);
   }
 
   const { data, error } = await query;
@@ -56,18 +61,18 @@ export async function getCollaborationRequestById(
 }
 
 /**
- * Get count of pending requests (for dashboard badge)
+ * Get count of unread requests (for dashboard badge)
  */
-export async function getPendingRequestsCount(): Promise<number> {
+export async function getUnreadRequestsCount(): Promise<number> {
   const supabase = await createClientServer();
 
   const { count, error } = await supabase
     .from('collaboration_requests')
     .select('*', { count: 'exact', head: true })
-    .eq('status', 'pending');
+    .eq('is_read', false);
 
   if (error) {
-    console.error('Error counting pending requests:', error);
+    console.error('Error counting unread requests:', error);
     return 0;
   }
 

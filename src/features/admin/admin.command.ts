@@ -7,6 +7,7 @@ import type {
   MaintenanceSettings,
   AffiliateProgramSettings,
   CollaboratorInput,
+  SpeakerInput,
 } from './types';
 
 /**
@@ -390,4 +391,105 @@ export async function updateCollaboratorOrder(
   userId: string
 ): Promise<{ success: boolean; error: string | null }> {
   return updateCollaborator(id, { display_order: displayOrder }, userId);
+}
+
+/**
+ * ==============================================
+ * SPEAKER COMMANDS
+ * ==============================================
+ */
+
+/**
+ * Create a new speaker
+ */
+export async function createSpeaker(
+  input: SpeakerInput,
+  userId: string
+): Promise<{ success: boolean; error: string | null; id?: string }> {
+  const supabase = await createClientServer();
+
+  const { data, error } = await supabase
+    .from('speakers')
+    .insert({
+      ...input,
+      created_by: userId,
+      updated_by: userId,
+    })
+    .select('id')
+    .single();
+
+  if (error) {
+    console.error('Error creating speaker:', error);
+    return {
+      success: false,
+      error: error.message || 'Failed to create speaker',
+    };
+  }
+
+  return { success: true, error: null, id: data.id };
+}
+
+/**
+ * Update an existing speaker
+ */
+export async function updateSpeaker(
+  id: string,
+  input: Partial<SpeakerInput>,
+  userId: string
+): Promise<{ success: boolean; error: string | null }> {
+  const supabase = await createClientServer();
+
+  const { error } = await supabase
+    .from('speakers')
+    .update({
+      ...input,
+      updated_by: userId,
+      updated_at: new Date().toISOString(),
+    })
+    .eq('id', id);
+
+  if (error) {
+    console.error(`Error updating speaker ${id}:`, error);
+    return {
+      success: false,
+      error: error.message || 'Failed to update speaker',
+    };
+  }
+
+  return { success: true, error: null };
+}
+
+/**
+ * Toggle speaker active status
+ */
+export async function toggleSpeakerActive(
+  id: string,
+  isActive: boolean,
+  userId: string
+): Promise<{ success: boolean; error: string | null }> {
+  return updateSpeaker(id, { is_active: isActive }, userId);
+}
+
+/**
+ * Delete a speaker
+ */
+export async function deleteSpeaker(
+  id: string
+): Promise<{ success: boolean; error: string | null }> {
+  const supabase = await createClientServer();
+
+  const { error } = await supabase
+    .from('speakers')
+    .delete()
+    .eq('id', id);
+
+  if (error) {
+    console.error(`Error deleting speaker ${id}:`, error);
+    return {
+      success: false,
+      error: error.message || 'Failed to delete speaker',
+    };
+  }
+
+  return { success: true, error: null };
 }

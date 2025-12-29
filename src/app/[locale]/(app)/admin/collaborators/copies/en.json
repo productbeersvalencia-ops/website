@@ -61,6 +61,23 @@
       "label": "Display order",
       "help": "Lower numbers appear first"
     },
+    "contactSection": "Internal Contact",
+    "contactName": {
+      "label": "Contact person",
+      "placeholder": "John Doe"
+    },
+    "contactEmail": {
+      "label": "Email",
+      "placeholder": "john@company.com"
+    },
+    "contactPhone": {
+      "label": "Phone",
+      "placeholder": "+34 600 000 000"
+    },
+    "notes": {
+      "label": "Notes",
+      "placeholder": "Internal notes about this collaborator..."
+    },
     "cancel": "Cancel",
     "save": "Save",
     "saving": "Saving..."

@@ -172,6 +172,49 @@ export type UpdateUserFlagsInput = z.infer<typeof updateUserFlagsSchema>;
 
 /**
  * ==============================================
+ * SPEAKER TYPES & SCHEMAS
+ * ==============================================
+ */
+
+export const speakerSchema = z.object({
+  name: z.string().min(1, 'Name is required'),
+  position: z.string().optional().nullable(),
+  company: z.string().optional().nullable(),
+  email: z.string().email('Invalid email format').optional().nullable().or(z.literal('')),
+  phone: z.string().optional().nullable(),
+  topics: z.array(z.string()).default([]),
+  bio: z.string().optional().nullable(),
+  photo_url: z.string().url('Invalid photo URL').optional().nullable().or(z.literal('')),
+  linkedin_url: z.string().url('Invalid LinkedIn URL').optional().nullable().or(z.literal('')),
+  twitter_url: z.string().url('Invalid Twitter URL').optional().nullable().or(z.literal('')),
+  notes: z.string().optional().nullable(),
+  is_active: z.boolean().default(true),
+});
+
+export type SpeakerInput = z.infer<typeof speakerSchema>;
+
+export interface Speaker {
+  id: string;
+  name: string;
+  position: string | null;
+  company: string | null;
+  email: string | null;
+  phone: string | null;
+  topics: string[];
+  bio: string | null;
+  photo_url: string | null;
+  linkedin_url: string | null;
+  twitter_url: string | null;
+  notes: string | null;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+  created_by: string | null;
+  updated_by: string | null;
+}
+
+/**
+ * ==============================================
  * ACTION RETURN TYPES
  * ==============================================
  */
@@ -203,6 +246,11 @@ export const collaboratorSchema = z.object({
   type: z.enum(['sponsor', 'hoster']),
   is_active: z.boolean().default(true),
   display_order: z.number().int().default(0),
+  // Campos de contacto interno (opcionales)
+  contact_name: z.string().optional().nullable(),
+  contact_email: z.string().email('Invalid email format').optional().nullable().or(z.literal('')),
+  contact_phone: z.string().optional().nullable(),
+  notes: z.string().optional().nullable(),
 });
 
 export type CollaboratorInput = z.infer<typeof collaboratorSchema>;
@@ -215,6 +263,12 @@ export interface Collaborator {
   type: 'sponsor' | 'hoster';
   is_active: boolean;
   display_order: number;
+  // Campos de contacto interno
+  contact_name: string | null;
+  contact_email: string | null;
+  contact_phone: string | null;
+  notes: string | null;
+  // Audit fields
   created_at: string;
   updated_at: string;
   created_by: string | null;

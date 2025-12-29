@@ -11,17 +11,30 @@
     "accepted": "Aceptado",
     "rejected": "Rechazado"
   },
+  "filter": {
+    "all": "Todos",
+    "unread": "No leídos",
+    "read": "Leídos",
+    "noUnread": "No hay mensajes sin leer",
+    "noRead": "No hay mensajes leídos"
+  },
   "empty": {
     "title": "No hay mensajes",
     "description": "Cuando alguien envíe una solicitud de colaboración desde la web, aparecerá aquí."
   },
   "actions": "Acciones",
+  "markRead": "Marcar como leído",
+  "markUnread": "Marcar como no leído",
+  "markedRead": "Marcado como leído",
+  "markedUnread": "Marcado como no leído",
+  "unreadIndicator": "Mensaje no leído",
   "markContacted": "Marcar como contactado",
   "markAccepted": "Marcar como aceptado",
   "markRejected": "Marcar como rechazado",
   "delete": "Eliminar",
   "statusUpdated": "Estado actualizado",
   "deleted": "Mensaje eliminado",
+  "error": "Algo salió mal",
   "deleteConfirm": {
     "title": "Eliminar mensaje",
     "description": "Esta acción no se puede deshacer. El mensaje será eliminado permanentemente.",

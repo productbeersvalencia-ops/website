@@ -1,0 +1,118 @@
+{
+  "title": "Ponentes",
+  "description": "Gestiona los ponentes de Product Beers",
+  "addNew": "Añadir ponente",
+  "empty": {
+    "title": "No hay ponentes todavía",
+    "description": "Añade tu primer ponente para empezar a organizar charlas."
+  },
+  "filters": {
+    "all": "Todos",
+    "active": "Activos",
+    "inactive": "Inactivos",
+    "searchPlaceholder": "Buscar por nombre, empresa o tema...",
+    "topicsPlaceholder": "Filtrar por tema"
+  },
+  "table": {
+    "photo": "Foto",
+    "name": "Nombre",
+    "position": "Cargo",
+    "company": "Empresa",
+    "topics": "Temas",
+    "status": "Estado",
+    "actions": "Acciones"
+  },
+  "status": {
+    "active": "Activo",
+    "inactive": "Inactivo"
+  },
+  "form": {
+    "title": {
+      "create": "Añadir ponente",
+      "edit": "Editar ponente"
+    },
+    "basicInfo": "Información básica",
+    "name": {
+      "label": "Nombre",
+      "placeholder": "Nombre completo"
+    },
+    "position": {
+      "label": "Cargo",
+      "placeholder": "Product Manager, CTO, Founder..."
+    },
+    "company": {
+      "label": "Empresa",
+      "placeholder": "Nombre de la empresa"
+    },
+    "contactInfo": "Contacto",
+    "email": {
+      "label": "Email",
+      "placeholder": "email@empresa.com"
+    },
+    "phone": {
+      "label": "Teléfono",
+      "placeholder": "+34 600 000 000"
+    },
+    "profileInfo": "Perfil",
+    "bio": {
+      "label": "Biografía",
+      "placeholder": "Breve descripción profesional del ponente..."
+    },
+    "photoUrl": {
+      "label": "URL de la foto",
+      "placeholder": "https://ejemplo.com/foto.jpg",
+      "help": "Enlace directo a la foto (JPG o PNG)"
+    },
+    "topics": {
+      "label": "Temas",
+      "placeholder": "Añadir tema y pulsar Enter",
+      "help": "Temas que domina el ponente (ej: Product Management, UX, Growth...)"
+    },
+    "socialLinks": "Redes sociales",
+    "linkedinUrl": {
+      "label": "LinkedIn",
+      "placeholder": "https://linkedin.com/in/usuario"
+    },
+    "twitterUrl": {
+      "label": "Twitter/X",
+      "placeholder": "https://twitter.com/usuario"
+    },
+    "internalNotes": "Notas internas",
+    "notes": {
+      "label": "Notas",
+      "placeholder": "Notas privadas sobre este ponente..."
+    },
+    "isActive": {
+      "label": "Activo",
+      "description": "Disponible para próximos eventos"
+    },
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "Guardando..."
+  },
+  "actions": {
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "messages": {
+    "created": "Ponente creado correctamente",
+    "updated": "Ponente actualizado correctamente",
+    "deleted": "Ponente eliminado correctamente",
+    "activated": "Ponente activado",
+    "deactivated": "Ponente desactivado",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo."
+  },
+  "confirmDelete": {
+    "title": "¿Eliminar ponente?",
+    "description": "Esta acción no se puede deshacer. El ponente se eliminará permanentemente.",
+    "cancel": "Cancelar",
+    "confirm": "Eliminar"
+  },
+  "detail": {
+    "contact": "Contacto",
+    "topics": "Temas",
+    "bio": "Biografía",
+    "social": "Redes",
+    "notes": "Notas"
+  }
+}

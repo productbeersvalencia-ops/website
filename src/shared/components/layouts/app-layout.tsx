@@ -17,6 +17,7 @@ interface AppLayoutProps {
     email?: string;
     avatar_url?: string;
   };
+  unreadMessagesCount?: number;
 }
 
 // Helper to get glass classes based on config
@@ -24,7 +25,7 @@ const glassClasses = brand.theme.glass
   ? 'glass border-white/10'
   : 'bg-background border-border';
 
-export function AppLayout({ children, user }: AppLayoutProps) {
+export function AppLayout({ children, user, unreadMessagesCount = 0 }: AppLayoutProps) {
   const t = useTranslations('layouts');
   const tConsent = useTranslations('consent');
   const locale = useLocale();
@@ -74,10 +75,17 @@ export function AppLayout({ children, user }: AppLayoutProps) {
           </Link>
           <Link
             href={`/${locale}/dashboard/mensajes`}
-            className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 hover:bg-accent"
+            className="flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 hover:bg-accent"
           >
-            <MessageSquare className="h-4 w-4" />
-            <span>Mensajes</span>
+            <span className="flex items-center space-x-3">
+              <MessageSquare className="h-4 w-4" />
+              <span>Mensajes</span>
+            </span>
+            {unreadMessagesCount > 0 && (
+              <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-xs font-medium text-primary-foreground">
+                {unreadMessagesCount > 99 ? '99+' : unreadMessagesCount}
+              </span>
+            )}
           </Link>
           <div className="border-t my-2 pt-2">
             <Link

@@ -36,6 +36,7 @@ import {
 } from '@/shared/components/ui/alert-dialog';
 import { Input } from '@/shared/components/ui/input';
 import { Label } from '@/shared/components/ui/label';
+import { Textarea } from '@/shared/components/ui/textarea';
 import {
   Select,
   SelectContent,
@@ -74,6 +75,10 @@ export function CollaboratorsAdmin({ initialCollaborators }: CollaboratorsAdminP
     type: 'sponsor',
     is_active: true,
     display_order: 0,
+    contact_name: '',
+    contact_email: '',
+    contact_phone: '',
+    notes: '',
   });
 
   const filteredCollaborators = collaborators.filter((c) =>
@@ -90,6 +95,10 @@ export function CollaboratorsAdmin({ initialCollaborators }: CollaboratorsAdminP
         type: collaborator.type,
         is_active: collaborator.is_active,
         display_order: collaborator.display_order,
+        contact_name: collaborator.contact_name || '',
+        contact_email: collaborator.contact_email || '',
+        contact_phone: collaborator.contact_phone || '',
+        notes: collaborator.notes || '',
       });
     } else {
       setEditingCollaborator(null);
@@ -100,6 +109,10 @@ export function CollaboratorsAdmin({ initialCollaborators }: CollaboratorsAdminP
         type: 'sponsor',
         is_active: true,
         display_order: collaborators.length,
+        contact_name: '',
+        contact_email: '',
+        contact_phone: '',
+        notes: '',
       });
     }
     setIsFormOpen(true);
@@ -140,6 +153,10 @@ export function CollaboratorsAdmin({ initialCollaborators }: CollaboratorsAdminP
                 updated_at: new Date().toISOString(),
                 created_by: null,
                 updated_by: null,
+                contact_name: formData.contact_name || null,
+                contact_email: formData.contact_email || null,
+                contact_phone: formData.contact_phone || null,
+                notes: formData.notes || null,
               },
             ]);
             toast.success(t('messages.created'));
@@ -313,7 +330,7 @@ export function CollaboratorsAdmin({ initialCollaborators }: CollaboratorsAdminP
 
       {/* Create/Edit Dialog */}
       <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-        <DialogContent>
+        <DialogContent className="max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
               {editingCollaborator ? t('form.title.edit') : t('form.title.create')}
@@ -382,6 +399,58 @@ export function CollaboratorsAdmin({ initialCollaborators }: CollaboratorsAdminP
                 onChange={(e) => setFormData({ ...formData, display_order: parseInt(e.target.value) || 0 })}
               />
               <p className="text-xs text-muted-foreground">{t('form.displayOrder.help')}</p>
+            </div>
+
+            {/* Internal Contact Section */}
+            <div className="border-t pt-4 mt-4">
+              <p className="text-sm font-medium mb-3">{t('form.contactSection')}</p>
+
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="contact_name">{t('form.contactName.label')}</Label>
+                  <Input
+                    id="contact_name"
+                    value={formData.contact_name || ''}
+                    onChange={(e) => setFormData({ ...formData, contact_name: e.target.value })}
+                    placeholder={t('form.contactName.placeholder')}
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="contact_email">{t('form.contactEmail.label')}</Label>
+                    <Input
+                      id="contact_email"
+                      type="email"
+                      value={formData.contact_email || ''}
+                      onChange={(e) => setFormData({ ...formData, contact_email: e.target.value })}
+                      placeholder={t('form.contactEmail.placeholder')}
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="contact_phone">{t('form.contactPhone.label')}</Label>
+                    <Input
+                      id="contact_phone"
+                      type="tel"
+                      value={formData.contact_phone || ''}
+                      onChange={(e) => setFormData({ ...formData, contact_phone: e.target.value })}
+                      placeholder={t('form.contactPhone.placeholder')}
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="notes">{t('form.notes.label')}</Label>
+                  <Textarea
+                    id="notes"
+                    value={formData.notes || ''}
+                    onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                    placeholder={t('form.notes.placeholder')}
+                    rows={3}
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="flex items-center gap-2">

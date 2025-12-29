@@ -1,0 +1,118 @@
+{
+  "title": "Speakers",
+  "description": "Manage Product Beers speakers",
+  "addNew": "Add speaker",
+  "empty": {
+    "title": "No speakers yet",
+    "description": "Add your first speaker to start organizing talks."
+  },
+  "filters": {
+    "all": "All",
+    "active": "Active",
+    "inactive": "Inactive",
+    "searchPlaceholder": "Search by name, company or topic...",
+    "topicsPlaceholder": "Filter by topic"
+  },
+  "table": {
+    "photo": "Photo",
+    "name": "Name",
+    "position": "Position",
+    "company": "Company",
+    "topics": "Topics",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "form": {
+    "title": {
+      "create": "Add speaker",
+      "edit": "Edit speaker"
+    },
+    "basicInfo": "Basic information",
+    "name": {
+      "label": "Name",
+      "placeholder": "Full name"
+    },
+    "position": {
+      "label": "Position",
+      "placeholder": "Product Manager, CTO, Founder..."
+    },
+    "company": {
+      "label": "Company",
+      "placeholder": "Company name"
+    },
+    "contactInfo": "Contact",
+    "email": {
+      "label": "Email",
+      "placeholder": "email@company.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "+34 600 000 000"
+    },
+    "profileInfo": "Profile",
+    "bio": {
+      "label": "Biography",
+      "placeholder": "Brief professional description of the speaker..."
+    },
+    "photoUrl": {
+      "label": "Photo URL",
+      "placeholder": "https://example.com/photo.jpg",
+      "help": "Direct link to photo (JPG or PNG)"
+    },
+    "topics": {
+      "label": "Topics",
+      "placeholder": "Add topic and press Enter",
+      "help": "Topics the speaker specializes in (e.g.: Product Management, UX, Growth...)"
+    },
+    "socialLinks": "Social links",
+    "linkedinUrl": {
+      "label": "LinkedIn",
+      "placeholder": "https://linkedin.com/in/username"
+    },
+    "twitterUrl": {
+      "label": "Twitter/X",
+      "placeholder": "https://twitter.com/username"
+    },
+    "internalNotes": "Internal notes",
+    "notes": {
+      "label": "Notes",
+      "placeholder": "Private notes about this speaker..."
+    },
+    "isActive": {
+      "label": "Active",
+      "description": "Available for upcoming events"
+    },
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving..."
+  },
+  "actions": {
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "messages": {
+    "created": "Speaker created successfully",
+    "updated": "Speaker updated successfully",
+    "deleted": "Speaker deleted successfully",
+    "activated": "Speaker activated",
+    "deactivated": "Speaker deactivated",
+    "error": "Something went wrong. Please try again."
+  },
+  "confirmDelete": {
+    "title": "Delete speaker?",
+    "description": "This action cannot be undone. The speaker will be permanently deleted.",
+    "cancel": "Cancel",
+    "confirm": "Delete"
+  },
+  "detail": {
+    "contact": "Contact",
+    "topics": "Topics",
+    "bio": "Biography",
+    "social": "Social",
+    "notes": "Notes"
+  }
+}

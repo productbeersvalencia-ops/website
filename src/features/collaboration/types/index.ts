@@ -29,6 +29,7 @@ export interface CollaborationRequest {
   message: string;
   status: CollaborationStatus;
   notes: string | null;
+  is_read: boolean;
   created_at: string;
   updated_at: string;
 }

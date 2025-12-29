@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 import { collaborationRequestSchema, updateCollaborationStatusSchema } from './types';
-import { createCollaborationRequest, updateCollaborationStatus, deleteCollaborationRequest } from './collaboration.command';
+import { createCollaborationRequest, updateCollaborationStatus, deleteCollaborationRequest, toggleCollaborationReadStatus } from './collaboration.command';
 
 interface ActionState {
   success: boolean;
@@ -107,5 +107,28 @@ export async function deleteCollaborationAction(
   return {
     success: false,
     error: result.error || 'Error al eliminar la solicitud',
+  };
+}
+
+/**
+ * Toggle read status of collaboration request (admin action)
+ */
+export async function toggleReadStatusAction(
+  id: string,
+  isRead: boolean
+): Promise<ActionState> {
+  const result = await toggleCollaborationReadStatus(id, isRead);
+
+  if (result.success) {
+    revalidatePath('/dashboard/mensajes');
+    return {
+      success: true,
+      error: null,
+    };
+  }
+
+  return {
+    success: false,
+    error: result.error || 'Error al actualizar el estado de lectura',
   };
 }

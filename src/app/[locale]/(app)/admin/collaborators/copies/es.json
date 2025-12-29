@@ -61,6 +61,23 @@
       "label": "Orden",
       "help": "Números menores aparecen primero"
     },
+    "contactSection": "Contacto Interno",
+    "contactName": {
+      "label": "Persona de contacto",
+      "placeholder": "Juan García"
+    },
+    "contactEmail": {
+      "label": "Email",
+      "placeholder": "juan@empresa.com"
+    },
+    "contactPhone": {
+      "label": "Teléfono",
+      "placeholder": "+34 600 000 000"
+    },
+    "notes": {
+      "label": "Notas",
+      "placeholder": "Notas internas sobre este colaborador..."
+    },
     "cancel": "Cancelar",
     "save": "Guardar",
     "saving": "Guardando..."

@@ -57,6 +57,23 @@
       "label": "Order",
       "help": "Lower numbers appear first"
     },
+    "contactSection": "Internal Contact",
+    "contactName": {
+      "label": "Contact Person",
+      "placeholder": "John Doe"
+    },
+    "contactEmail": {
+      "label": "Email",
+      "placeholder": "john@company.com"
+    },
+    "contactPhone": {
+      "label": "Phone",
+      "placeholder": "+1 555 000 000"
+    },
+    "notes": {
+      "label": "Notes",
+      "placeholder": "Internal notes about this collaborator..."
+    },
     "cancel": "Cancel",
     "save": "Save",
     "saving": "Saving..."

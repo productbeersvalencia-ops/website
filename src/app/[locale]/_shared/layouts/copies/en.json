@@ -9,5 +9,22 @@
   "settings": "Settings",
   "logout": "Logout",
   "login": "Log In",
-  "register": "Sign Up"
+  "register": "Sign Up",
+  "admin": {
+    "title": "Admin Panel",
+    "backToApp": "Back to App",
+    "nav": {
+      "dashboard": "Dashboard",
+      "events": "Events",
+      "content": "Content",
+      "gallery": "Gallery",
+      "speakers": "Speakers",
+      "sponsors": "Sponsors",
+      "team": "Team",
+      "communities": "Communities",
+      "messages": "Messages",
+      "infoBar": "Info-Bar",
+      "collaborators": "Collaborators"
+    }
+  }
 }
